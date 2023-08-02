@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1519632114 source:d:\desktop\desktop\next\tetris game\tetris\main.cpp
+	<graphics.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
+1517051519 d:\desktop\desktop\next\tetris game\tetris\classes.h
+	<graphics.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+
+1519626714 source:e:\tetris\tetris\main.cpp
+	<graphics.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
