@@ -32,11 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Clean.h" />
+		<Unit filename="Coloring.h" />
+		<Unit filename="Matrix.h" />
+		<Unit filename="allblocks.h" />
 		<Unit filename="main.cpp" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Unit filename="psqr1.h" />
+		<Unit filename="psqr2.h" />
+		<Unit filename="psqr3.h" />
+		<Unit filename="psqr4.h" />
+		<Unit filename="psqr5.h" />
+		<Unit filename="psqr6.h" />
+		<Unit filename="psqr7.h" />
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
