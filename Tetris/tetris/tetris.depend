@@ -21,11 +21,11 @@
 	<time.h>
 	<iostream>
 
-1691157987 source:e:\tetris\tetris\tetris\main.cpp
+1691227772 source:e:\tetris\tetris\tetris\main.cpp
 	<fstream>
 	"allblocks.h"
 
-1691157987 e:\tetris\tetris\tetris\allblocks.h
+1691221419 e:\tetris\tetris\tetris\allblocks.h
 	"psqr1.h"
 	"psqr2.h"
 	"psqr3.h"
@@ -33,6 +33,8 @@
 	"psqr5.h"
 	"psqr6.h"
 	"psqr7.h"
+	<windows.h>
+	"MMSystem.h"
 
 1691157987 e:\tetris\tetris\tetris\psqr1.h
 	"Coloring.h"

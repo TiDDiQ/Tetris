@@ -8,6 +8,8 @@
 #include "psqr5.h"
 #include "psqr6.h"
 #include "psqr7.h"
+#include <windows.h>
+#include "MMSystem.h"
 #define ssize 30
 class ALL{
     public:
