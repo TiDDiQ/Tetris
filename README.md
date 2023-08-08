@@ -12,16 +12,25 @@ Các tính năng mới:
 * Sửa lại hệ thống tính điểm:
   - Mỗi khối có cách tính điểm số riêng, điểm chỉ được cộng lên sau khi khối được đặt xuống:
      (+)   Khối T: +5 điểm
+    
      (+)   Khối L ngược và khối L xuôi: +15 điểm
+    
      (+)   Khối bậc thang ngược và khối bậc thang xuôi: +25 điểm
+    
      (+)   Khối vuông: +20 điểm
+    
      (+)   Khối thẳng dài: +10 điểm
+    
   - Một hàng ngang được lấp đầy: +100 điểm
   - Điểm Combo:
      (+)   Nếu có n hàng ngang liên tiếp, thì hàng ngang thứ 2 sẽ cộng vào 200 điểm, hàng ngang thứ 3 sẽ cộng vào 300 điểm, vv... (nhiều nhất là +1000 điểm)
+    
      (+)   Nếu đang có combo và lần đặt khối tiếp theo lại tạo hàng ngang thì combo vẫn được cộng lên tiếp
+    
      (+)   Nếu đang có combo và lần đặt khối tiếp theo không tạo hàng ngang thì combo sẽ bị mất
+    
      (+)   Có phần hiển thị combo ở trên màn hình
+    
   - Sau 1000 điểm thì sẽ lên một level
 
 * Lưu trữ lại và hiển thị điểm số cao nhất sau một lần chơi
