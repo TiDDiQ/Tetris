@@ -1,0 +1,80 @@
+# depslib dependency file v1.0
+1519632114 source:d:\desktop\desktop\next\tetris game\tetris\main.cpp
+	<graphics.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
+1517051519 d:\desktop\desktop\next\tetris game\tetris\classes.h
+	<graphics.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+
+1519626714 source:e:\tetris\tetris\main.cpp
+	<graphics.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
+1691505364 source:e:\tetris\tetris\tetris\main.cpp
+	<fstream>
+	"allblocks.h"
+	"Template.h"
+
+1691221419 e:\tetris\tetris\tetris\allblocks.h
+	"psqr1.h"
+	"psqr2.h"
+	"psqr3.h"
+	"psqr4.h"
+	"psqr5.h"
+	"psqr6.h"
+	"psqr7.h"
+	<windows.h>
+	"MMSystem.h"
+
+1691157987 e:\tetris\tetris\tetris\psqr1.h
+	"Coloring.h"
+
+1691157987 e:\tetris\tetris\tetris\coloring.h
+	"Matrix.h"
+
+1691157987 e:\tetris\tetris\tetris\matrix.h
+	<graphics.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<string>
+	"Clean.h"
+
+1691156381 e:\tetris\tetris\tetris\clean.h
+	<graphics.h>
+	<iostream>
+
+1691157987 e:\tetris\tetris\tetris\psqr2.h
+	"Coloring.h"
+
+1691157987 e:\tetris\tetris\tetris\psqr3.h
+	"Coloring.h"
+
+1691157987 e:\tetris\tetris\tetris\psqr4.h
+	"Coloring.h"
+
+1691157987 e:\tetris\tetris\tetris\psqr5.h
+	"Coloring.h"
+
+1691157987 e:\tetris\tetris\tetris\psqr6.h
+	"Coloring.h"
+
+1691157987 e:\tetris\tetris\tetris\psqr7.h
+	"Coloring.h"
+
+1691504986 e:\tetris\tetris\tetris\template.h
+	"allblocks.h"
+
