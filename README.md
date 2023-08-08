@@ -37,21 +37,33 @@ Các tính năng mới:
   
 * Bom:
      (+)   Ban đầu sẽ có 2 viên
+  
      (+)   Mỗi lần dùng sẽ xóa đi 4 hàng đáy và kéo các hàng phía trên xuống
+  
      (+)   Nếu không có gì ở 4 hàng cuối thì bom vẫn được dùng nhưng sẽ không làm gì cả
+  
      (+)   được tặng thêm một viên nếu lên level 2, 4, 6, 8, ...
+  
      (+)   Sử dụng bom không tăng điểm số
+  
 * Template: bắt đầu game với các khối được đặt sẵn theo các hình dạng nhất định (có 3 mẫu)
 
 
 Điều khiển:
      (+)   Mũi tên trái : di chuyển sang bên trái
+     
      (+)   Mũi tên phải : di chuyển sang bên phải
+     
      (+)   Mũi tên xuống : đặt khối xuống dưới
+     
      (+)   Nút '0' : Dừng game lại (pause)
+     
      (+)   Nút 'r' : Chơi lại từ đầu
+     
      (+)   Nút 'h', 's', 'c':  Chơi lại từ đầu với một template
+     
      (+)   Nút '1' : Chơi lại game (sau khi thua)
+     
      (+)   Nút 'x' : thoát game
 
 
