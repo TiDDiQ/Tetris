@@ -1,9 +1,11 @@
 # Tetris
 
 Game Tetris c++ sử dụng thư viện graphics.h
-Nguồn tham khảo code : https://www.youtube.com/watch?v=-s7QhkHPuTE&t=126s
 
+Nguồn tham khảo code : https://www.youtube.com/watch?v=-s7QhkHPuTE&t=126s
 Link tải code tham khảo về : https://www.dropbox.com/s/jgv6ueivxkapvth/Tetris.zip?dl=0
+
+Cách mở: mở tetris.exe
 
 Các tính năng mới:
 * Màu sắc khác nhau cho từng khối
