@@ -52,6 +52,7 @@ Các tính năng mới:
 
 
 Điều khiển:
+     
      (+)   Mũi tên trái : di chuyển sang bên trái
      
      (+)   Mũi tên phải : di chuyển sang bên phải
