@@ -49,24 +49,21 @@ Các tính năng mới:
      (+)   Sử dụng bom không tăng điểm số
   
 * Template: bắt đầu game với các khối được đặt sẵn theo các hình dạng nhất định (có 3 mẫu)
-
+* Vạch kẻ chia vùng an toàn:
+     (+)   Sau 10 giây, vạch này sẽ xuống một ô, sau khi xuống 13 ô vạch này sẽ không đi xuống nữa
+     (+)   Nếu các khối xếp chồng lên nhau vượt quá vạch an toàn thì tốc độ rơi sẽ tăng lên
+     (+)   Nếu các khối xếp chồng lên nhau không vượt qua vạch an toàn và cùng thời điểm tạo được một hàng ngang thì sẽ được tặng thêm một quả bom và bấm lại thời 
+           gian
+     (+)   Nếu được Combo 2x (2 lần) trở lên thì vạch sẽ đi lên một ô
 
 Điều khiển:
-     
      (+)   Mũi tên trái : di chuyển sang bên trái
-     
      (+)   Mũi tên phải : di chuyển sang bên phải
-     
      (+)   Mũi tên xuống : đặt khối xuống dưới
-     
      (+)   Nút '0' : Dừng game lại (pause)
-     
      (+)   Nút 'r' : Chơi lại từ đầu
-     
      (+)   Nút 'h', 's', 'c':  Chơi lại từ đầu với một template
-     
      (+)   Nút '1' : Chơi lại game (sau khi thua)
-     
      (+)   Nút 'x' : thoát game
 
 
