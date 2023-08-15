@@ -58,12 +58,19 @@ Các tính năng mới:
 
 Điều khiển:
      (+)   Mũi tên trái : di chuyển sang bên trái
+     
      (+)   Mũi tên phải : di chuyển sang bên phải
+     
      (+)   Mũi tên xuống : đặt khối xuống dưới
+     
      (+)   Nút '0' : Dừng game lại (pause)
+     
      (+)   Nút 'r' : Chơi lại từ đầu
+     
      (+)   Nút 'h', 's', 'c':  Chơi lại từ đầu với một template
+     
      (+)   Nút '1' : Chơi lại game (sau khi thua)
+     
      (+)   Nút 'x' : thoát game
 
 
