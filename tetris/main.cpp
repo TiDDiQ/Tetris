@@ -12,6 +12,7 @@ void sqr1(int x,int y,int clr=CYAN);
 void getup();
 void PointForEachBlock(int block, int& SCORE);
 void RocketBonus(int& RPG, int LEVEL, int& LEVELtmp);
+void Deathline(int& deathlineRow, int& tmpTime, int& currentClock, bool& resetClock);
 
 int main(){
     string filepath = "HIGHESTSCORE.txt";
@@ -27,15 +28,50 @@ int main(){
     bool resetOrNot = false;
     char ch;
     bool flag=false,down_flag=false;
+    bool deleteClock = true;
+    bool resetClock = true;
+    bool fastFalling = false;
+    int tmpTime=0;
+    int currentClock=11; // 1 second screen init time average
+    int deathlineRow=2;
+
     srand(time(NULL));
     ALL *all;
     all=new ALL();
     r=all->refresh();
+
     while(true) //MAIN LOOP
     {
+
         while(!kbhit())
         {
-
+            for(int i=0; i<10; i++){
+                if(mat->POS[deathlineRow-1][i]==1){
+                    fastFalling=true;
+                    break;
+                }
+                else{
+                    fastFalling=false;
+                }
+            }
+            if(deathlineRow<=15){
+                Deathline(deathlineRow, tmpTime, currentClock, resetClock);
+            }
+            else{
+                if(deleteClock==true){
+                    setbkcolor(LIGHTCYAN);
+                    settextstyle(3, HORIZ_DIR, 6);
+                    outtextxy(360, 510, "        ");
+                    setcolor(RED);
+                    setbkcolor(BLACK);
+                    line(mat->X[0], mat->Y[deathlineRow], mat->X[9] + 30, mat->Y[deathlineRow]);
+                    setcolor(BLACK);
+                    setbkcolor(LIGHTCYAN);
+                    settextstyle(3, HORIZ_DIR, 2);
+                    outtextxy(360, 510, "Line stopped");
+                    deleteClock = false;
+                }
+            }
             //if(all.print(&x,&y,&r,flag))
             if(all->print(&x,&y,&r,flag,down_flag))
             {
@@ -69,9 +105,22 @@ int main(){
                         if(COMBO<10){
                             COMBO++;
                         }
+
+                        if(COMBO>=2){
+                            if(deathlineRow>2){
+                                deathlineRow--;
+                                deleteClock=true;
+                                resetClock=true;
+                            }
+                        }
+
                         if(SCORE/1000)
                             LEVEL=SCORE/1000 + 1;
                         RocketBonus(RPG, LEVEL, LEVELtmp);
+                        if(!fastFalling){
+                            if(RPG<15)
+                                RPG++;
+                        }
                         char tmpc[10];
                         itoa(SCORE,tmpc,10);
                         strcat(tmpc,"    ");
@@ -79,6 +128,7 @@ int main(){
                         itoa(LEVEL,tmpc,10);
                         strcat(tmpc,"    ");
                         outtextxy(460, 300, tmpc);
+                        currentClock = 10;
                     }
                     else{
                         countingNotFull++;
@@ -102,10 +152,10 @@ int main(){
                         }
                         setcolor(BLACK);
                         setbkcolor(LIGHTCYAN);
+                        settextstyle(3, HORIZ_DIR, 6);
+                        outtextxy(360, 510, "  ");
                         settextstyle(4, HORIZ_DIR, 2);
                         outtextxy(360, 470, "Game Over  ");
-                        outtextxy(360, 510, "                                 ");
-                        outtextxy(360, 540, "                                 ");
                         outtextxy(360, 580, "                                 ");
                         outtextxy(360, 510, "Press '1' to        ");
                         outtextxy(360, 540, "restart                    ");
@@ -122,12 +172,18 @@ int main(){
                             if(ch=='x')
                                 return 0;
                         }while(ch!='1');
+                        outtextxy(360, 510, "                                 ");
+                        outtextxy(360, 540, "                                 ");
                         outtextxy(360, 470, "Playing...    ");
                         settextstyle(3, HORIZ_DIR, 2);
-                        outtextxy(360, 510, "KEYS: LEFT, RIGHT,");
-                        outtextxy(360, 540, "DOWN, SPACE, 0, Q, R");
+
                         outtextxy(360, 580, "Rocket : ");
                         RPG=2;
+                        deleteClock = true;
+                        resetClock=true;
+                        fastFalling = false;
+                        currentClock=11;
+                        deathlineRow=2;
                         outtextxy(440, 580, "2");
                         settextstyle(4, HORIZ_DIR, 2);
                         SCORE=0;
@@ -163,10 +219,13 @@ int main(){
                 strcat(tmpc,"    ");
                 outtextxy(460, 300, tmpc);
             }
-            if(10-(LEVEL-1) >=0)
+
+            if(LEVEL<11 && fastFalling==false){
                 Sleep(10-(LEVEL-1));
-            else
-                Sleep(0);
+            }
+            else{
+                Sleep(0.5);
+            }
             flag=false;
             down_flag=false;
             y++;
@@ -177,6 +236,11 @@ int main(){
         {
             case 'x' : return 0;
             case 'r' :
+                deleteClock = true;
+                resetClock=true;
+                fastFalling = false;
+                currentClock=10;
+                deathlineRow=2;
                 RPG=2;
                 SCORE=0;
                 LEVEL=1;
@@ -200,6 +264,11 @@ int main(){
                 y++;
                 break;
             case 'c' :
+                deleteClock = true;
+                resetClock=true;
+                fastFalling = false;
+                currentClock=10;
+                deathlineRow=2;
                 RPG=2;
                 SCORE=0;
                 LEVEL=1;
@@ -224,6 +293,11 @@ int main(){
                 cpp();
                 break;
             case 's' :
+                deleteClock = true;
+                resetClock=true;
+                fastFalling = false;
+                currentClock=10;
+                deathlineRow=2;
                 RPG=2;
                 SCORE=0;
                 LEVEL=1;
@@ -248,6 +322,11 @@ int main(){
                 siu();
                 break;
             case 'h' :
+                deleteClock = true;
+                resetClock=true;
+                fastFalling = false;
+                currentClock=10;
+                deathlineRow=2;
                 RPG=2;
                 SCORE=0;
                 LEVEL=1;
@@ -342,6 +421,7 @@ int main(){
         }
     }
     getch();
+    return 0;
 }
 
 void combo(int COMBO){
@@ -421,8 +501,6 @@ void getup(){
     outtextxy(360, 430, tmpc);
     outtextxy(360, 470, "Playing...");
     settextstyle(3, HORIZ_DIR, 2);
-    outtextxy(360, 510, "KEYS: LEFT, RIGHT,");
-    outtextxy(360, 540, "DOWN, SPACE, 0, Q, R");
     outtextxy(360, 580, "Rocket : ");
     outtextxy(440, 580, "2");
     setcolor(RED);
@@ -480,7 +558,9 @@ void PointForEachBlock(int block, int& SCORE){
 }
 void RocketBonus(int& RPG, int LEVEL, int& LEVELtmp){
     if(LEVEL%2 == 0 && LEVEL != LEVELtmp) // Given 1 rpg after 2 rounds
-        RPG++;
+        if(RPG<15){
+           RPG++;
+        }
         LEVELtmp = LEVEL;
         setcolor(BLACK);
         setbkcolor(LIGHTCYAN);
@@ -488,4 +568,43 @@ void RocketBonus(int& RPG, int LEVEL, int& LEVELtmp){
         char tmpc[10];
         itoa(RPG,tmpc,10);
         outtextxy(440, 580, tmpc);
+}
+void Deathline(int& deathlineRow,int& tmpTime, int& currentClock, bool& resetClock){
+    setcolor(RED);
+    setbkcolor(BLACK);
+    line(mat->X[0], mat->Y[deathlineRow], mat->X[9] + 30, mat->Y[deathlineRow]);
+    setcolor(BLACK);
+    setbkcolor(LIGHTCYAN);
+    time_t currentTime = time(nullptr); // unit: second
+
+    if(currentTime>tmpTime) {
+        tmpTime=currentTime;
+        if(currentClock>1){
+            currentClock--;
+        }
+        else{
+            currentClock=10;
+            setcolor(BLACK);
+            setbkcolor(BLACK);
+            line(mat->X[0], mat->Y[deathlineRow], mat->X[9] + 30, mat->Y[deathlineRow]);
+            deathlineRow++;
+        }
+    }
+
+    char tmpc[2];
+    itoa(currentClock,tmpc,10);
+    strcat(tmpc,"    ");
+    settextstyle(3, HORIZ_DIR, 6);
+    setbkcolor(LIGHTCYAN);
+    if(currentClock>3){
+        setcolor(BLACK);
+    }
+    else{
+        setcolor(RED);
+    }
+    if(resetClock){
+        outtextxy(360, 510, "          ");
+        resetClock=false;
+    }
+    outtextxy(360, 510, tmpc);
 }
